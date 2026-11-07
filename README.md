@@ -10,28 +10,52 @@ This repository contains two machine learning projects developed using Python an
 
 ## Projects
 
-### 1\. MNIST Handwritten Digit Classification
+
+### 1. MNIST Handwritten Digit Classification
 
 **Notebook:** `MNIST.ipynb`
 
-**Objective:** Develop a machine learning model to recognize handwritten digits (0–9) from image data.
+**Objective:** Implement machine learning algorithms to recognize handwritten digits (0–9) using the MNIST dataset.
 
 **Dataset:**
+- 70,000 grayscale handwritten digit images.
+- Image dimensions: 28 × 28 pixels.
+- 784 features per image.
+- 60,000 training samples and 10,000 test samples.
 
-- MNIST handwritten digit dataset.
-- 70,000 grayscale images.
-- Each image contains 28 × 28 pixels.
-- 784 features per image after flattening.
+**Algorithms Implemented:**
+- Stochastic Gradient Descent (SGD) Classifier
+- Random Forest Classifier
+- Support Vector Machine (SVM)
+- K-Nearest Neighbors (KNN)
 
-**Workflow:**
+**Additional Techniques:**
+- Stratified cross-validation
+- GridSearchCV for hyperparameter optimization
+- Confusion matrix analysis
+- Precision-recall and ROC analysis
+- Image data augmentation using pixel shifting
+- Multilabel classification
 
-- Dataset acquisition using Scikit-learn's OpenML interface.
-- Data exploration and visualization.
-- Data preprocessing.
-- Model training and classification.
-- Model evaluation and performance analysis.
+**Best KNN Configuration:**
 
-**Libraries:** Python, NumPy, Pandas, Matplotlib, Scikit-learn.
+```python
+KNeighborsClassifier(
+    n_neighbors=4,
+    weights='distance'
+)
+```
+
+**Evaluation Results:**
+
+| Metric | Result |
+|---|---:|
+| Best cross-validation accuracy | 97.03% |
+| Test accuracy after data augmentation | 97.63% |
+| Multilabel macro F1-score | 0.9764 |
+| Multilabel weighted F1-score | 0.9778 |
+
+*Note: F1 scores correspond to the auxiliary multilabel task (digit ≥ 7 and odd digit), not ten-class digit recognition. The reported test accuracy after augmentation is from the notebook's saved output.*
 
 ### 2\. Sentiment Analysis Using Natural Language Processing
 
