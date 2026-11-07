@@ -1,6 +1,6 @@
 Machine Learning Projects
 
-Author: Himanshu Gupta
+Author: Himanshu Gupt
 Academic Background: BS-MS Mathematics and Data Science
 GitHub: "Himanshugupt4570" (https://github.com/Himanshugupt4570)
 
